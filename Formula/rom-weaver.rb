@@ -1,25 +1,28 @@
 class RomWeaver < Formula
-  desc "Local-first offline toolkit for ROMs and ROM hack patches"
+  desc "Local-first toolkit for ROMs and disc images: inspect, extract, compress, and apply, create, or bundle patches. Offline via a browser service-worker PWA or CLI."
   homepage "https://rom-weaver.com"
-  version "0.6.7"
+  version "0.7.1"
   license "AGPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "https://github.com/brandonocasey/rom-weaver/releases/download/v0.6.7/rom-weaver-darwin-arm64"
-      sha256 "f638651dd6e605e4f29aee6bb7867d0241e6ae236dced9cc15e7d27853d5777b"
+      url "https://github.com/brandonocasey/rom-weaver/releases/download/v0.7.1/rom-weaver-darwin-arm64"
+      sha256 "a36978eb3299d65a3a2d233f49638e205758c449d8831876f40c8537e25cca59"
     end
     on_intel do
-      url "https://github.com/brandonocasey/rom-weaver/releases/download/v0.6.7/rom-weaver-darwin-x64"
-      sha256 "ceed9284c4398d18c9525599235b723fba894790cd9b9f5d0de1ab6bc38c4d13"
+      url "https://github.com/brandonocasey/rom-weaver/releases/download/v0.7.1/rom-weaver-darwin-x64"
+      sha256 "6dd42deadf47a90db80613b9e54774adc10083d686d5a2652462116e1de585a8"
     end
   end
 
   on_linux do
-    depends_on arch: :x86_64
+    on_arm do
+      url "https://github.com/brandonocasey/rom-weaver/releases/download/v0.7.1/rom-weaver-linux-arm64-musl"
+      sha256 "4a392fa66661800f5f8ac426a11c53cf6b231c0530be93e99b837aa494311051"
+    end
     on_intel do
-      url "https://github.com/brandonocasey/rom-weaver/releases/download/v0.6.7/rom-weaver-linux-x64-gnu"
-      sha256 "b985eeeb8a7b09cc6758c906f19be63a5686bf8db5581c313199baf70bb95f28"
+      url "https://github.com/brandonocasey/rom-weaver/releases/download/v0.7.1/rom-weaver-linux-x64-gnu"
+      sha256 "58a132aa8b8c441e22e3534ccaf3df9a7fa3134849c073b01492f14546bcda69"
     end
   end
 
